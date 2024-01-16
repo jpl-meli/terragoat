@@ -41,7 +41,7 @@ Before you proceed please take a not of these warning:
 
 ## Requirements
 
-* Terraform 0.12
+* Terraform 1.5.5
 * aws cli
 * azure cli
 
@@ -58,11 +58,12 @@ You can deploy multiple TerraGoat stacks in a single AWS account using the param
 #### Create an S3 Bucket backend to keep Terraform state
 
 ```bash
-export TERRAGOAT_STATE_BUCKET="mydevsecops-bucket"
+export TERRAGOAT_STATE_BUCKET="tf-backend"
 export TF_VAR_company_name=acme
-export TF_VAR_environment=mydevsecops
-export TF_VAR_region="us-west-2"
+export TF_VAR_environment=poc
+export TF_VAR_region="us-east-1"
 
+# Create Bucket for TF Backend
 aws s3api create-bucket --bucket $TERRAGOAT_STATE_BUCKET \
     --region $TF_VAR_region --create-bucket-configuration LocationConstraint=$TF_VAR_region
 
@@ -85,6 +86,7 @@ aws s3api put-bucket-encryption --bucket $TERRAGOAT_STATE_BUCKET --server-side-e
 
 ```bash
 cd terraform/aws/
+
 terraform init \
 -backend-config="bucket=$TERRAGOAT_STATE_BUCKET" \
 -backend-config="key=$TF_VAR_company_name-$TF_VAR_environment.tfstate" \

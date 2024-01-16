@@ -1,0 +1,12 @@
+{
+    "errorCode": [{
+      "exists": false
+    }],
+    "account": ["199745886785", "967112610963"],
+    "detail": {
+      "errorCode": [{
+        "exists": false
+      }],
+      "eventName": ["CreateHostedZone", "ChangeResourceRecordSets", "DeleteHostedZone", "AssociateAddress", "AllocateAddress", "DeleteDBInstance", "AddTagsToResource", "ModifyDBInstance", "CreateDBInstance", "TagResource", "UpdateClusterConfig", "CreateCluster", "ModifyLaunchTemplate", "CreateLaunchTemplateVersion", "CreateLaunchTemplate", "UpdateAutoScalingGroup", "CreateAutoScalingGroup", "CreateBucket", "CreateLoadBalancer", "CreateNetworkInterface", "DeleteNetworkInterface", "StartInstances", "StopInstances", "CreateLoadBalancer", "CreateSecurityGroup", "RevokeSecurityGroupIngress", "AuthorizeSecurityGroupIngress", "ModifySecurityGroupRules", "CreateManagedPrefixList", "ModifyManagedPrefixList", "TerminateInstances", "CreateTags", "DeleteTags", "ModifyNetworkInterfaceAttribute", "AttachNetworkInterface", "DetachNetworkInterface", "RunInstances", "CreateSubnet", "CreateDefaultSubnet", "ReplaceRouteTableAssociation", "AssociateRouteTable", "CreateRoute", "DeleteRoute", "ReplaceRoute", "CreateRouteTable", "DisassociateRouteTable", "MoveAccount", "CreateOrUpdateTags", "DeleteAutoScalingGroup", "RunJobFlow", "CreateDBCluster", "SetTerminationProtection", "CreateDefaultVpc", "ModifyVpcAttribute", "ModifyVpcTenancy", "DeleteVpc", "AssociateVpcCidrBlock", "DisassociateVpcCidrBlock", "CreateNetworkInterfacePermission", "ResetNetworkInterfaceAttribute", "AssignPrivateIpAddresses", "AssignIpv6Addresses", "UnassignPrivateIpAddresses", "UnassignIpv6Addresses", "CreateVpc"]
+    }
+  }

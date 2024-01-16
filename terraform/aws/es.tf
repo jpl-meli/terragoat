@@ -27,12 +27,15 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
   }
 }
 
-data aws_iam_policy_document "policy" {
+data "aws_iam_policy_document" "policy" {
   statement {
     actions = ["es:*"]
     principals {
-      type        = "AWS"
-      identifiers = ["*"]
+      type = "AWS"
+      identifiers = [
+        "arn:aws:iam::967112610963:role/CrossAccountManager-seginf_cloudsec",
+        "arn:aws:iam::967112610963:role/CrossAccountManager-denis-sandbox"
+      ]
     }
     resources = ["*"]
   }
