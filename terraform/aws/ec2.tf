@@ -2,7 +2,9 @@ resource "aws_instance" "web_host" {
   # ec2 have plain text secrets in user data
   ami           = var.ami
   instance_type = "t2.nano"
-
+  metadata_options {
+    http_tokens = "required"
+  }
   vpc_security_group_ids = [
   aws_security_group.web-node.id]
   subnet_id = aws_subnet.web_subnet.id
@@ -85,14 +87,14 @@ resource "aws_security_group" "web-node" {
     to_port   = 80
     protocol  = "tcp"
     cidr_blocks = [
-    "0.0.0.0/0"]
+    "190.131.195.178/32"]
   }
   ingress {
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
     cidr_blocks = [
-    "0.0.0.0/0"]
+    "190.131.195.178/32"]
   }
   egress {
     from_port = 0
